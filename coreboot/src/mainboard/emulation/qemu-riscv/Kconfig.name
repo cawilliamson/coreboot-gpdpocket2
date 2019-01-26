@@ -1,0 +1,2 @@
+config BOARD_EMULATION_QEMU_RISCV
+	bool "QEMU riscv"
