@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-docker run --rm -v $(pwd):/data -it coreboot/coreboot-sdk bash
-
+docker build -t coreboot .
+docker run --rm -it -v $(pwd):/data coreboot bash
