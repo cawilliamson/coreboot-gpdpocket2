@@ -1,0 +1,2 @@
+config BOARD_GPD_POCKET2
+	bool "Pocket 2"

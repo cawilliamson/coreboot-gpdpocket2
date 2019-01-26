@@ -1,0 +1,16 @@
+if VENDOR_GPD
+
+choice
+	prompt "Mainboard model"
+
+source "src/mainboard/gpd/*/Kconfig.name"
+
+endchoice
+
+source "src/mainboard/gpd/*/Kconfig"
+
+config MAINBOARD_VENDOR
+	string
+	default "GPD"
+
+endif # VENDOR_GPD
