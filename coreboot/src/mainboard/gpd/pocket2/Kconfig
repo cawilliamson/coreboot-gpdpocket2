@@ -18,18 +18,10 @@ if BOARD_GPD_POCKET2
 
 config BOARD_SPECIFIC_OPTIONS
 	def_bool y
-# TODO: Replace all below with GPD Pocket 2 specific info
-#	select CPU_VIA_NANO
-#	select NORTHBRIDGE_VIA_VX900
-#	select SUPERIO_FINTEK_F81865F
-#	select HAVE_PIRQ_TABLE
-#	select PIRQ_ROUTE
-#	select HAVE_MP_TABLE
-#	#select HAVE_OPTION_TABLE
-#	#select HAVE_ACPI_TABLES
-#	#select HAVE_ACPI_RESUME
-#	#select BOARD_HAS_FADT
-#	select BOARD_ROMSIZE_KB_512
+	select BOARD_ROMSIZE_KB_4096
+	select PCI_DEVICE_ID_INTEL_KBL_ID_Y
+	select PCI_DEVICE_ID_INTEL_SPT_LP_Y_PREMIUM_HDCP22
+	select SOC_INTEL_KABYLAKE
 
 config MAINBOARD_DIR
 	string
