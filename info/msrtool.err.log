@@ -1,0 +1,6 @@
+msrtool 4.9-514-gdacf083c2f
+Detected system linux: Linux with /dev/cpu/*/msr
+
+Unable to detect a known target; can not decode any MSRs! (Use -t to force)
+Please send a report or patch to coreboot@coreboot.org. Thanks for your help!
+

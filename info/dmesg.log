@@ -1,0 +1,909 @@
+[    0.000000] Linux version 4.15.0-29-generic (buildd@lgw01-amd64-057) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018 (Ubuntu 4.15.0-29.31-generic 4.15.18)
+[    0.000000] Command line: BOOT_IMAGE=/casper/vmlinuz file=/cdrom/preseed/ubuntu.seed boot=casper quiet splash ---
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x008: 'MPX bounds registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x010: 'MPX CSR'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: xstate_offset[3]:  832, xstate_sizes[3]:   64
+[    0.000000] x86/fpu: xstate_offset[4]:  896, xstate_sizes[4]:   64
+[    0.000000] x86/fpu: Enabled xstate features 0x1f, context size is 960 bytes, using 'compacted' format.
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x0000000000057fff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000000058000-0x0000000000058fff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000059000-0x000000000009dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009e000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x0000000084c95fff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000084c96000-0x0000000084cd3fff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x0000000084cd4000-0x0000000086039fff] usable
+[    0.000000] BIOS-e820: [mem 0x000000008603a000-0x000000008603afff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x000000008603b000-0x000000008603bfff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000008603c000-0x000000008be8dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000008be8e000-0x000000008ca8dfff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000008ca8e000-0x000000008caf7fff] usable
+[    0.000000] BIOS-e820: [mem 0x000000008caf8000-0x000000008cb74fff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x000000008cb75000-0x000000008cf5dfff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000008cf5e000-0x000000008cffdfff] type 20
+[    0.000000] BIOS-e820: [mem 0x000000008cffe000-0x000000008cffefff] usable
+[    0.000000] BIOS-e820: [mem 0x000000008cfff000-0x000000008fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fe000000-0x00000000fe010fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed00000-0x00000000fed00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000026effffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] efi: EFI v2.60 by American Megatrends
+[    0.000000] efi:  ACPI 2.0=0x84c96000  ACPI=0x84c96000  SMBIOS=0x8cebf000  SMBIOS 3.0=0x8cebe000  ESRT=0x88976c18  MEMATTR=0x8896a418 
+[    0.000000] secureboot: Secure boot could not be determined (mode 0)
+[    0.000000] SMBIOS 3.0.0 present.
+[    0.000000] DMI: Default string Default string/Default string, BIOS 0.17 08/28/2018
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] e820: last_pfn = 0x26f000 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: write-back
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-BFFFF uncachable
+[    0.000000]   C0000-FFFFF write-protect
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 00C0000000 mask 7FC0000000 uncachable
+[    0.000000]   1 base 00A0000000 mask 7FE0000000 uncachable
+[    0.000000]   2 base 0090000000 mask 7FF0000000 uncachable
+[    0.000000]   3 base 008E000000 mask 7FFE000000 uncachable
+[    0.000000]   4 base 008D800000 mask 7FFF800000 uncachable
+[    0.000000]   5 disabled
+[    0.000000]   6 disabled
+[    0.000000]   7 disabled
+[    0.000000]   8 disabled
+[    0.000000]   9 disabled
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.000000] e820: last_pfn = 0x8cfff max_arch_pfn = 0x400000000
+[    0.000000] esrt: Reserving ESRT space from 0x0000000088976c18 to 0x0000000088976c50.
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] Base memory trampoline at [        (ptrval)] 97000 size 24576
+[    0.000000] Using GB pages for direct mapping
+[    0.000000] BRK [0x3c53f000, 0x3c53ffff] PGTABLE
+[    0.000000] BRK [0x3c540000, 0x3c540fff] PGTABLE
+[    0.000000] BRK [0x3c541000, 0x3c541fff] PGTABLE
+[    0.000000] BRK [0x3c542000, 0x3c542fff] PGTABLE
+[    0.000000] BRK [0x3c543000, 0x3c543fff] PGTABLE
+[    0.000000] BRK [0x3c544000, 0x3c544fff] PGTABLE
+[    0.000000] BRK [0x3c545000, 0x3c545fff] PGTABLE
+[    0.000000] BRK [0x3c546000, 0x3c546fff] PGTABLE
+[    0.000000] BRK [0x3c547000, 0x3c547fff] PGTABLE
+[    0.000000] RAMDISK: [mem 0x33997000-0x35cc2fff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x0000000084C96000 000024 (v02 ALASKA)
+[    0.000000] ACPI: XSDT 0x0000000084C960B8 0000F4 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: FACP 0x0000000084CBE498 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: DSDT 0x0000000084C96248 028250 (v02 ALASKA A M I    01072009 INTL 20160422)
+[    0.000000] ACPI: FACS 0x000000008CB44F00 000040
+[    0.000000] ACPI: APIC 0x0000000084CBE5B0 000084 (v03 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: FPDT 0x0000000084CBE638 000044 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: FIDT 0x0000000084CBE680 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: MCFG 0x0000000084CBE720 00003C (v01 ALASKA A M I    01072009 MSFT 00000097)
+[    0.000000] ACPI: SSDT 0x0000000084CBE760 000359 (v01 SataRe SataTabl 00001000 INTL 20160422)
+[    0.000000] ACPI: SSDT 0x0000000084CBEAC0 00A421 (v02 DptfTa DptfTabl 00001000 INTL 20160422)
+[    0.000000] ACPI: SSDT 0x0000000084CC8EE8 00099A (v02 GddvDu GddvDumm 00001000 INTL 20160422)
+[    0.000000] ACPI: SSDT 0x0000000084CC9888 003162 (v02 SaSsdt SaSsdt   00003000 INTL 20160422)
+[    0.000000] ACPI: HPET 0x0000000084CCC9F0 000038 (v01 INTEL  KBL-ULT  00000001 MSFT 0000005F)
+[    0.000000] ACPI: SSDT 0x0000000084CCCA28 000902 (v02 INTEL  Ther_Rvp 00001000 INTL 20160422)
+[    0.000000] ACPI: SSDT 0x0000000084CCD330 0007DD (v02 INTEL  xh_rvp03 00000000 INTL 20160422)
+[    0.000000] ACPI: UEFI 0x0000000084CCDB10 000042 (v01 ALASKA A M I    00000002      01000013)
+[    0.000000] ACPI: SSDT 0x0000000084CCDB58 0017AE (v02 CpuRef CpuSsdt  00003000 INTL 20160422)
+[    0.000000] ACPI: LPIT 0x0000000084CCF308 000094 (v01 INTEL  KBL-ULT  00000000 MSFT 0000005F)
+[    0.000000] ACPI: SSDT 0x0000000084CCF3A0 000141 (v02 INTEL  HdaDsp   00000000 INTL 20160422)
+[    0.000000] ACPI: SSDT 0x0000000084CCF4E8 00029F (v02 INTEL  sensrhub 00000000 INTL 20160422)
+[    0.000000] ACPI: SSDT 0x0000000084CCF788 003002 (v02 INTEL  PtidDevc 00001000 INTL 20160422)
+[    0.000000] ACPI: SSDT 0x0000000084CD2790 000517 (v02 INTEL  TbtTypeC 00000000 INTL 20160422)
+[    0.000000] ACPI: DBGP 0x0000000084CD2CA8 000034 (v01 INTEL           00000002 MSFT 0000005F)
+[    0.000000] ACPI: DBG2 0x0000000084CD2CE0 000054 (v00 INTEL           00000002 MSFT 0000005F)
+[    0.000000] ACPI: DMAR 0x0000000084CD2D38 000138 (v01 INTEL  EDK2     00000001 INTL 00000001)
+[    0.000000] ACPI: NHLT 0x0000000084CD2E70 00002D (v00 INTEL  EDK2     00000002      01000013)
+[    0.000000] ACPI: TPM2 0x0000000084CD2EA0 000034 (v03 ALASKA A M I    00000001 AMI  00000000)
+[    0.000000] ACPI: BGRT 0x0000000084CD2ED8 000038 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: WSMT 0x0000000084CD2F10 000028 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000026effffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x26efd3000-0x26effdfff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000026effffff]
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000001000-0x0000000000057fff]
+[    0.000000]   node   0: [mem 0x0000000000059000-0x000000000009dfff]
+[    0.000000]   node   0: [mem 0x0000000000100000-0x0000000084c95fff]
+[    0.000000]   node   0: [mem 0x0000000084cd4000-0x0000000086039fff]
+[    0.000000]   node   0: [mem 0x000000008603c000-0x000000008be8dfff]
+[    0.000000]   node   0: [mem 0x000000008ca8e000-0x000000008caf7fff]
+[    0.000000]   node   0: [mem 0x000000008cffe000-0x000000008cffefff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x000000026effffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000026effffff]
+[    0.000000] On node 0 totalpages: 2076245
+[    0.000000]   DMA zone: 64 pages used for memmap
+[    0.000000]   DMA zone: 23 pages reserved
+[    0.000000]   DMA zone: 3996 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 8891 pages used for memmap
+[    0.000000]   DMA32 zone: 569017 pages, LIFO batch:31
+[    0.000000]   Normal zone: 23488 pages used for memmap
+[    0.000000]   Normal zone: 1503232 pages, LIFO batch:31
+[    0.000000] Reserved but unavailable: 98 pages
+[    0.000000] Reserving Intel graphics memory at 0x000000008e000000-0x000000008fffffff
+[    0.000000] ACPI: PM-Timer IO Port: 0x1808
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-119
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x00058000-0x00058fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0009e000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x84c96000-0x84cd3fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x8603a000-0x8603afff]
+[    0.000000] PM: Registered nosave memory: [mem 0x8603b000-0x8603bfff]
+[    0.000000] PM: Registered nosave memory: [mem 0x8be8e000-0x8ca8dfff]
+[    0.000000] PM: Registered nosave memory: [mem 0x8caf8000-0x8cb74fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x8cb75000-0x8cf5dfff]
+[    0.000000] PM: Registered nosave memory: [mem 0x8cf5e000-0x8cffdfff]
+[    0.000000] PM: Registered nosave memory: [mem 0x8cfff000-0x8fffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x90000000-0xdfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xe0000000-0xefffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xf0000000-0xfdffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfe000000-0xfe010fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfe011000-0xfebfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec01000-0xfecfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed00000-0xfed00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed01000-0xfedfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xfeffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xff000000-0xffffffff]
+[    0.000000] e820: [mem 0x90000000-0xdfffffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.000000] random: get_random_bytes called from start_kernel+0x99/0x4fd with crng_init=0
+[    0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[    0.000000] percpu: Embedded 46 pages/cpu @        (ptrval) s151552 r8192 d28672 u524288
+[    0.000000] pcpu-alloc: s151552 r8192 d28672 u524288 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 0 1 2 3 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 2043779
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=/casper/vmlinuz file=/cdrom/preseed/ubuntu.seed boot=casper quiet splash ---
+[    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+[    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.000000] Memory: 7969556K/8304980K available (12300K kernel code, 2470K rwdata, 4240K rodata, 2408K init, 2416K bss, 335424K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Kernel/User page tables isolation: enabled
+[    0.000000] ftrace: allocating 39092 entries in 153 pages
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=4.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 524544, nr_irqs: 1024, preallocated irqs: 16
+[    0.000000] Console: colour dummy device 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] ACPI: Core revision 20170831
+[    0.000000] ACPI: 12 ACPI AML tables successfully acquired and loaded
+[    0.000000] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635855245 ns
+[    0.000000] hpet clockevent registered
+[    0.004000] APIC: Switch to symmetric I/O mode setup
+[    0.004000] DMAR: Host address width 39
+[    0.004000] DMAR: DRHD base: 0x000000fed90000 flags: 0x0
+[    0.004000] DMAR: dmar0: reg_base_addr fed90000 ver 1:0 cap 1c0000c40660462 ecap 19e2ff0505e
+[    0.004000] DMAR: DRHD base: 0x000000fed91000 flags: 0x1
+[    0.004000] DMAR: dmar1: reg_base_addr fed91000 ver 1:0 cap d2008c40660462 ecap f050da
+[    0.004000] DMAR: RMRR base: 0x0000008c41b000 end: 0x0000008c43afff
+[    0.004000] DMAR: RMRR base: 0x0000008d800000 end: 0x0000008fffffff
+[    0.004000] DMAR: ANDD device: 1 name: \_SB.PCI0.I2C0
+[    0.004000] DMAR: ANDD device: 2 name: \_SB.PCI0.I2C1
+[    0.004000] DMAR: ANDD device: 3 name: \_SB.PCI0.I2C2
+[    0.004000] DMAR: ANDD device: 9 name: \_SB.PCI0.UA00
+[    0.004000] DMAR-IR: IOAPIC id 2 under DRHD base  0xfed91000 IOMMU 1
+[    0.004000] DMAR-IR: HPET id 0 under DRHD base 0xfed91000
+[    0.004000] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    0.004000] DMAR-IR: Enabled IRQ remapping in x2apic mode
+[    0.004000] x2apic enabled
+[    0.004000] Switched APIC routing to cluster x2apic.
+[    0.008000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.028000] tsc: Detected 1600.000 MHz processor
+[    0.028000] tsc: Detected 1608.000 MHz TSC
+[    0.028000] Calibrating delay loop (skipped), value calculated using timer frequency.. 3216.00 BogoMIPS (lpj=6432000)
+[    0.028000] pid_max: default: 32768 minimum: 301
+[    0.028000] Security Framework initialized
+[    0.028000] Yama: becoming mindful.
+[    0.028000] AppArmor: AppArmor initialized
+[    0.028000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+[    0.028000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.028000] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.028000] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.032084] CPU: Physical Processor ID: 0
+[    0.032085] CPU: Processor Core ID: 0
+[    0.032094] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
+[    0.032095] ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(8)
+[    0.032104] mce: CPU supports 8 MCE banks
+[    0.032120] CPU0: Thermal monitoring enabled (TM1)
+[    0.032148] process: using mwait in idle threads
+[    0.032152] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.032153] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.032155] Spectre V2 : Mitigation: Full generic retpoline
+[    0.032156] Spectre V2 : Spectre v2 mitigation: Filling RSB on context switch
+[    0.032157] Speculative Store Bypass: Vulnerable
+[    0.032333] Freeing SMP alternatives memory: 36K
+[    0.037750] TSC deadline timer enabled
+[    0.037758] smpboot: CPU0: Intel(R) Core(TM) m3-7Y30 CPU @ 1.00GHz (family: 0x6, model: 0x8e, stepping: 0x9)
+[    0.037863] Performance Events: PEBS fmt3+, Skylake events, 32-deep LBR, full-width counters, Intel PMU driver.
+[    0.037916] ... version:                4
+[    0.037917] ... bit width:              48
+[    0.037918] ... generic registers:      4
+[    0.037919] ... value mask:             0000ffffffffffff
+[    0.037921] ... max period:             00007fffffffffff
+[    0.037921] ... fixed-purpose events:   3
+[    0.037922] ... event mask:             000000070000000f
+[    0.037985] Hierarchical SRCU implementation.
+[    0.039729] NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[    0.039751] smp: Bringing up secondary CPUs ...
+[    0.039868] x86: Booting SMP configuration:
+[    0.039869] .... node  #0, CPUs:      #1 #2 #3
+[    0.040957] smp: Brought up 1 node, 4 CPUs
+[    0.040957] smpboot: Max logical packages: 1
+[    0.040957] smpboot: Total of 4 processors activated (12864.00 BogoMIPS)
+[    0.044485] devtmpfs: initialized
+[    0.044485] x86/mm: Memory block size: 128MB
+[    0.045260] evm: security.selinux
+[    0.045261] evm: security.SMACK64
+[    0.045262] evm: security.SMACK64EXEC
+[    0.045263] evm: security.SMACK64TRANSMUTE
+[    0.045264] evm: security.SMACK64MMAP
+[    0.045265] evm: security.apparmor
+[    0.045266] evm: security.ima
+[    0.045267] evm: security.capability
+[    0.045292] PM: Registering ACPI NVS region [mem 0x84c96000-0x84cd3fff] (253952 bytes)
+[    0.045292] PM: Registering ACPI NVS region [mem 0x8603a000-0x8603afff] (4096 bytes)
+[    0.045292] PM: Registering ACPI NVS region [mem 0x8caf8000-0x8cb74fff] (512000 bytes)
+[    0.045292] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.045292] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.045292] pinctrl core: initialized pinctrl subsystem
+[    0.045292] RTC time: 13:15:28, date: 01/26/19
+[    0.045292] NET: Registered protocol family 16
+[    0.045292] audit: initializing netlink subsys (disabled)
+[    0.045292] audit: type=2000 audit(1548508528.044:1): state=initialized audit_enabled=0 res=1
+[    0.045292] cpuidle: using governor ladder
+[    0.045292] cpuidle: using governor menu
+[    0.045292] ACPI: bus type PCI registered
+[    0.045292] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.045292] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[    0.045292] PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+[    0.045292] PCI: Using configuration type 1 for base access
+[    0.049647] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.049647] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.049647] ACPI: Added _OSI(Module Device)
+[    0.049647] ACPI: Added _OSI(Processor Device)
+[    0.049647] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.049647] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.049647] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.057150] ACPI Error: [_SB_.PCI0.RP05.PXSX] Namespace lookup failure, AE_NOT_FOUND (20170831/dswload2-191)
+[    0.057170] No Local Variables are initialized for Method [PXSX]
+[    0.057172] No Arguments are initialized for method [PXSX]
+[    0.057175] ACPI Exception: AE_NOT_FOUND, During name lookup/catalog (20170831/psobject-252)
+[    0.057184] ACPI Error: Method parse/execution failed \_SB.PCI0.RP04.PXSX, AE_NOT_FOUND (20170831/psparse-550)
+[    0.058167] ACPI Error: [_SB_.PCI0.RP09.PXSX] Namespace lookup failure, AE_NOT_FOUND (20170831/dswload2-191)
+[    0.058179] No Local Variables are initialized for Method [PXSX]
+[    0.058182] No Arguments are initialized for method [PXSX]
+[    0.058184] ACPI Exception: AE_NOT_FOUND, During name lookup/catalog (20170831/psobject-252)
+[    0.058191] ACPI Error: Method parse/execution failed \_SB.PCI0.RP08.PXSX, AE_NOT_FOUND (20170831/psparse-550)
+[    0.062099] ACPI: Executed 49 blocks of module-level executable AML code
+[    0.101747] ACPI: Dynamic OEM Table Load:
+[    0.101760] ACPI: SSDT 0xFFFF977E24FC8000 000507 (v02 PmRef  Cpu0Ist  00003000 INTL 20160422)
+[    0.102329] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.102516] ACPI: \_PR_.PR00: _OSC native thermal LVT Acked
+[    0.105824] ACPI: Dynamic OEM Table Load:
+[    0.105835] ACPI: SSDT 0xFFFF977E248B9400 0003FF (v02 PmRef  Cpu0Cst  00003001 INTL 20160422)
+[    0.106358] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.106715] ACPI: Dynamic OEM Table Load:
+[    0.106723] ACPI: SSDT 0xFFFF977E248C9000 0000BA (v02 PmRef  Cpu0Hwp  00003000 INTL 20160422)
+[    0.107193] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.107511] ACPI: Dynamic OEM Table Load:
+[    0.107521] ACPI: SSDT 0xFFFF977E24FCE000 000628 (v02 PmRef  HwpLvt   00003000 INTL 20160422)
+[    0.107960] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.109164] ACPI: Dynamic OEM Table Load:
+[    0.109179] ACPI: SSDT 0xFFFF977E2613D000 000D14 (v02 PmRef  ApIst    00003000 INTL 20160422)
+[    0.111181] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.111571] ACPI: Dynamic OEM Table Load:
+[    0.111580] ACPI: SSDT 0xFFFF977E248BBC00 000317 (v02 PmRef  ApHwp    00003000 INTL 20160422)
+[    0.112226] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.112625] ACPI: Dynamic OEM Table Load:
+[    0.112635] ACPI: SSDT 0xFFFF977E248B8400 00030A (v02 PmRef  ApCst    00003000 INTL 20160422)
+[    0.113285] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.117692] ACPI: EC: EC started
+[    0.117694] ACPI: EC: interrupt blocked
+[    0.122845] ACPI: \_SB_.PCI0.LPCB.H_EC: Used as first EC
+[    0.122849] ACPI: \_SB_.PCI0.LPCB.H_EC: GPE=0x50, EC_CMD/EC_SC=0x66, EC_DATA=0x62
+[    0.122852] ACPI: \_SB_.PCI0.LPCB.H_EC: Used as boot DSDT EC to handle transactions
+[    0.122852] ACPI: Interpreter enabled
+[    0.122934] ACPI: (supports S0 S3 S4 S5)
+[    0.122935] ACPI: Using IOAPIC for interrupt routing
+[    0.123014] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.125353] ACPI: Enabled 6 GPEs in block 00 to 7F
+[    0.189134] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-fe])
+[    0.189144] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    0.193163] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug PME AER PCIeCapability]
+[    0.194935] PCI host bridge to bus 0000:00
+[    0.194939] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.194942] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.194945] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.194947] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000c3fff window]
+[    0.194949] pci_bus 0000:00: root bus resource [mem 0x000c4000-0x000c7fff window]
+[    0.194952] pci_bus 0000:00: root bus resource [mem 0x000c8000-0x000cbfff window]
+[    0.194954] pci_bus 0000:00: root bus resource [mem 0x000cc000-0x000cffff window]
+[    0.194956] pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff window]
+[    0.194958] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff window]
+[    0.194961] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff window]
+[    0.194963] pci_bus 0000:00: root bus resource [mem 0x000dc000-0x000dffff window]
+[    0.194965] pci_bus 0000:00: root bus resource [mem 0x000e0000-0x000e3fff window]
+[    0.194967] pci_bus 0000:00: root bus resource [mem 0x000e4000-0x000e7fff window]
+[    0.194970] pci_bus 0000:00: root bus resource [mem 0x000e8000-0x000ebfff window]
+[    0.194972] pci_bus 0000:00: root bus resource [mem 0x000ec000-0x000effff window]
+[    0.194974] pci_bus 0000:00: root bus resource [mem 0x000f0000-0x000fffff window]
+[    0.194976] pci_bus 0000:00: root bus resource [mem 0x90000000-0xdfffffff window]
+[    0.194979] pci_bus 0000:00: root bus resource [mem 0xfd000000-0xfe7fffff window]
+[    0.194982] pci_bus 0000:00: root bus resource [bus 00-fe]
+[    0.194999] pci 0000:00:00.0: [8086:590c] type 00 class 0x060000
+[    0.195763] pci 0000:00:02.0: [8086:591e] type 00 class 0x030000
+[    0.195784] pci 0000:00:02.0: reg 0x10: [mem 0xde000000-0xdeffffff 64bit]
+[    0.195796] pci 0000:00:02.0: reg 0x18: [mem 0xc0000000-0xcfffffff 64bit pref]
+[    0.195804] pci 0000:00:02.0: reg 0x20: [io  0xf000-0xf03f]
+[    0.195832] pci 0000:00:02.0: BAR 2: assigned to efifb
+[    0.196166] pci 0000:00:04.0: [8086:1903] type 00 class 0x118000
+[    0.196189] pci 0000:00:04.0: reg 0x10: [mem 0xdf120000-0xdf127fff 64bit]
+[    0.196623] pci 0000:00:14.0: [8086:9d2f] type 00 class 0x0c0330
+[    0.196661] pci 0000:00:14.0: reg 0x10: [mem 0xdf110000-0xdf11ffff 64bit]
+[    0.196766] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[    0.197266] pci 0000:00:14.2: [8086:9d31] type 00 class 0x118000
+[    0.197303] pci 0000:00:14.2: reg 0x10: [mem 0xdf137000-0xdf137fff 64bit]
+[    0.197738] pci 0000:00:15.0: [8086:9d60] type 00 class 0x118000
+[    0.198002] pci 0000:00:15.0: reg 0x10: [mem 0xdf136000-0xdf136fff 64bit]
+[    0.199164] pci 0000:00:15.1: [8086:9d61] type 00 class 0x118000
+[    0.199434] pci 0000:00:15.1: reg 0x10: [mem 0xdf135000-0xdf135fff 64bit]
+[    0.200592] pci 0000:00:15.2: [8086:9d62] type 00 class 0x118000
+[    0.200862] pci 0000:00:15.2: reg 0x10: [mem 0xdf134000-0xdf134fff 64bit]
+[    0.201960] pci 0000:00:16.0: [8086:9d3a] type 00 class 0x078000
+[    0.202002] pci 0000:00:16.0: reg 0x10: [mem 0xdf133000-0xdf133fff 64bit]
+[    0.202108] pci 0000:00:16.0: PME# supported from D3hot
+[    0.202516] pci 0000:00:1d.0: [8086:9d18] type 01 class 0x060400
+[    0.202645] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+[    0.203183] pci 0000:00:1e.0: [8086:9d27] type 00 class 0x118000
+[    0.203453] pci 0000:00:1e.0: reg 0x10: [mem 0xdf132000-0xdf132fff 64bit]
+[    0.204553] pci 0000:00:1e.4: [8086:9d2b] type 00 class 0x080501
+[    0.204598] pci 0000:00:1e.4: reg 0x10: [mem 0xdf131000-0xdf131fff 64bit]
+[    0.205183] pci 0000:00:1f.0: [8086:9d4b] type 00 class 0x060100
+[    0.205653] pci 0000:00:1f.2: [8086:9d21] type 00 class 0x058000
+[    0.205680] pci 0000:00:1f.2: reg 0x10: [mem 0xdf12c000-0xdf12ffff]
+[    0.206069] pci 0000:00:1f.3: [8086:9d71] type 00 class 0x040380
+[    0.206111] pci 0000:00:1f.3: reg 0x10: [mem 0xdf128000-0xdf12bfff 64bit]
+[    0.206145] pci 0000:00:1f.3: reg 0x20: [mem 0xdf100000-0xdf10ffff 64bit]
+[    0.206217] pci 0000:00:1f.3: PME# supported from D3hot D3cold
+[    0.206718] pci 0000:00:1f.4: [8086:9d23] type 00 class 0x0c0500
+[    0.206787] pci 0000:00:1f.4: reg 0x10: [mem 0xdf130000-0xdf1300ff 64bit]
+[    0.206860] pci 0000:00:1f.4: reg 0x20: [io  0xf040-0xf05f]
+[    0.207652] pci 0000:01:00.0: [8086:3165] type 00 class 0x028000
+[    0.207804] pci 0000:01:00.0: reg 0x10: [mem 0xdf000000-0xdf001fff 64bit]
+[    0.208281] pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+[    0.220216] pci 0000:00:1d.0: PCI bridge to [bus 01]
+[    0.220224] pci 0000:00:1d.0:   bridge window [mem 0xdf000000-0xdf0fffff]
+[    0.225513] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 10 *11 12 14 15)
+[    0.225659] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 *10 11 12 14 15)
+[    0.225801] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 10 *11 12 14 15)
+[    0.225943] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 10 *11 12 14 15)
+[    0.226085] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 10 *11 12 14 15)
+[    0.226225] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 10 *11 12 14 15)
+[    0.226365] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 10 *11 12 14 15)
+[    0.226508] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 10 *11 12 14 15)
+[    0.227906] ACPI: EC: interrupt unblocked
+[    0.227930] ACPI: EC: event unblocked
+[    0.227946] ACPI: \_SB_.PCI0.LPCB.H_EC: GPE=0x50, EC_CMD/EC_SC=0x66, EC_DATA=0x62
+[    0.227949] ACPI: \_SB_.PCI0.LPCB.H_EC: Used as boot DSDT EC to handle transactions and events
+[    0.228310] SCSI subsystem initialized
+[    0.228336] libata version 3.00 loaded.
+[    0.228336] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.228336] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.228336] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.228336] vgaarb: loaded
+[    0.228336] ACPI: bus type USB registered
+[    0.228336] usbcore: registered new interface driver usbfs
+[    0.228336] usbcore: registered new interface driver hub
+[    0.228336] usbcore: registered new device driver usb
+[    0.228336] EDAC MC: Ver: 3.0.0
+[    0.228385] Registered efivars operations
+[    0.244046] PCI: Using ACPI for IRQ routing
+[    0.271793] PCI: pci_cache_line_size set to 64 bytes
+[    0.272276] e820: reserve RAM buffer [mem 0x00058000-0x0005ffff]
+[    0.272278] e820: reserve RAM buffer [mem 0x0009e000-0x0009ffff]
+[    0.272279] e820: reserve RAM buffer [mem 0x84c96000-0x87ffffff]
+[    0.272281] e820: reserve RAM buffer [mem 0x8603a000-0x87ffffff]
+[    0.272283] e820: reserve RAM buffer [mem 0x8be8e000-0x8bffffff]
+[    0.272284] e820: reserve RAM buffer [mem 0x8caf8000-0x8fffffff]
+[    0.272286] e820: reserve RAM buffer [mem 0x8cfff000-0x8fffffff]
+[    0.272288] e820: reserve RAM buffer [mem 0x26f000000-0x26fffffff]
+[    0.276002] NetLabel: Initializing
+[    0.276002] NetLabel:  domain hash size = 128
+[    0.276002] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.276002] NetLabel:  unlabeled traffic allowed by default
+[    0.276103] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    0.276113] hpet0: 8 comparators, 64-bit 24.000000 MHz counter
+[    0.278183] clocksource: Switched to clocksource hpet
+[    0.293546] VFS: Disk quotas dquot_6.6.0
+[    0.293570] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.293729] AppArmor: AppArmor Filesystem Enabled
+[    0.293765] pnp: PnP ACPI init
+[    0.294365] system 00:00: [io  0x0680-0x069f] has been reserved
+[    0.294368] system 00:00: [io  0xffff] has been reserved
+[    0.294371] system 00:00: [io  0xffff] has been reserved
+[    0.294374] system 00:00: [io  0xffff] has been reserved
+[    0.294377] system 00:00: [io  0x1800-0x18fe] has been reserved
+[    0.294380] system 00:00: [io  0x164e-0x164f] has been reserved
+[    0.294389] system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.294618] pnp 00:01: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.294698] system 00:02: [io  0x1854-0x1857] has been reserved
+[    0.294705] system 00:02: Plug and Play ACPI device, IDs INT3f0d PNP0c02 (active)
+[    0.296795] system 00:03: [mem 0xfed10000-0xfed17fff] has been reserved
+[    0.296798] system 00:03: [mem 0xfed18000-0xfed18fff] has been reserved
+[    0.296801] system 00:03: [mem 0xfed19000-0xfed19fff] has been reserved
+[    0.296804] system 00:03: [mem 0xe0000000-0xefffffff] has been reserved
+[    0.296808] system 00:03: [mem 0xfed20000-0xfed3ffff] has been reserved
+[    0.296811] system 00:03: [mem 0xfed90000-0xfed93fff] could not be reserved
+[    0.296814] system 00:03: [mem 0xfed45000-0xfed8ffff] has been reserved
+[    0.296817] system 00:03: [mem 0xff000000-0xffffffff] has been reserved
+[    0.296820] system 00:03: [mem 0xfee00000-0xfeefffff] could not be reserved
+[    0.296824] system 00:03: [mem 0xdffe0000-0xdfffffff] has been reserved
+[    0.296831] system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.296923] system 00:04: [mem 0xfd000000-0xfdabffff] has been reserved
+[    0.296926] system 00:04: [mem 0xfdad0000-0xfdadffff] has been reserved
+[    0.296929] system 00:04: [mem 0xfdb00000-0xfdffffff] has been reserved
+[    0.296932] system 00:04: [mem 0xfe000000-0xfe01ffff] could not be reserved
+[    0.296935] system 00:04: [mem 0xfe036000-0xfe03bfff] has been reserved
+[    0.296938] system 00:04: [mem 0xfe03d000-0xfe3fffff] has been reserved
+[    0.296941] system 00:04: [mem 0xfe410000-0xfe7fffff] has been reserved
+[    0.296947] system 00:04: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.297641] system 00:05: [io  0xff00-0xfffe] has been reserved
+[    0.297648] system 00:05: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.300448] system 00:06: [mem 0xfe029000-0xfe029fff] has been reserved
+[    0.300452] system 00:06: [mem 0xfe028000-0xfe028fff] has been reserved
+[    0.300459] system 00:06: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.303215] pnp: PnP ACPI: found 7 devices
+[    0.312840] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.312871] pci 0000:00:1d.0: PCI bridge to [bus 01]
+[    0.312888] pci 0000:00:1d.0:   bridge window [mem 0xdf000000-0xdf0fffff]
+[    0.312910] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.312913] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.312915] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.312918] pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000c3fff window]
+[    0.312920] pci_bus 0000:00: resource 8 [mem 0x000c4000-0x000c7fff window]
+[    0.312923] pci_bus 0000:00: resource 9 [mem 0x000c8000-0x000cbfff window]
+[    0.312926] pci_bus 0000:00: resource 10 [mem 0x000cc000-0x000cffff window]
+[    0.312928] pci_bus 0000:00: resource 11 [mem 0x000d0000-0x000d3fff window]
+[    0.312931] pci_bus 0000:00: resource 12 [mem 0x000d4000-0x000d7fff window]
+[    0.312933] pci_bus 0000:00: resource 13 [mem 0x000d8000-0x000dbfff window]
+[    0.312936] pci_bus 0000:00: resource 14 [mem 0x000dc000-0x000dffff window]
+[    0.312939] pci_bus 0000:00: resource 15 [mem 0x000e0000-0x000e3fff window]
+[    0.312941] pci_bus 0000:00: resource 16 [mem 0x000e4000-0x000e7fff window]
+[    0.312944] pci_bus 0000:00: resource 17 [mem 0x000e8000-0x000ebfff window]
+[    0.312946] pci_bus 0000:00: resource 18 [mem 0x000ec000-0x000effff window]
+[    0.312949] pci_bus 0000:00: resource 19 [mem 0x000f0000-0x000fffff window]
+[    0.312952] pci_bus 0000:00: resource 20 [mem 0x90000000-0xdfffffff window]
+[    0.312954] pci_bus 0000:00: resource 21 [mem 0xfd000000-0xfe7fffff window]
+[    0.312957] pci_bus 0000:01: resource 1 [mem 0xdf000000-0xdf0fffff]
+[    0.313352] NET: Registered protocol family 2
+[    0.313658] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.313841] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    0.314012] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.314060] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.314099] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.314196] NET: Registered protocol family 1
+[    0.314220] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.314980] PCI: CLS 64 bytes, default 64
+[    0.315037] Unpacking initramfs...
+[   13.034031] Freeing initrd memory: 36016K
+[   13.034094] DMAR: ACPI device "device:71" under DMAR at fed91000 as 00:15.0
+[   13.034100] DMAR: ACPI device "device:72" under DMAR at fed91000 as 00:15.1
+[   13.034104] DMAR: ACPI device "device:73" under DMAR at fed91000 as 00:15.2
+[   13.034110] DMAR: ACPI device "device:74" under DMAR at fed91000 as 00:1e.0
+[   13.034132] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[   13.034135] software IO TLB [mem 0x80c96000-0x84c96000] (64MB) mapped at [        (ptrval)-        (ptrval)]
+[   13.034397] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x172daa3a18b, max_idle_ns: 440795212390 ns
+[   13.034595] Scanning for low memory corruption every 60 seconds
+[   13.035694] Initialise system trusted keyrings
+[   13.035708] Key type blacklist registered
+[   13.035783] workingset: timestamp_bits=36 max_order=21 bucket_order=0
+[   13.037610] zbud: loaded
+[   13.038485] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[   13.038740] fuse init (API version 7.26)
+[   13.042711] Key type asymmetric registered
+[   13.042712] Asymmetric key parser 'x509' registered
+[   13.042756] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[   13.042832] io scheduler noop registered
+[   13.042837] io scheduler deadline registered
+[   13.042905] io scheduler cfq registered (default)
+[   13.043646] pcieport 0000:00:1d.0: AER enabled with IRQ 122
+[   13.043677] pcieport 0000:00:1d.0: Signaling PME with IRQ 122
+[   13.043782] efifb: probing for efifb
+[   13.043800] efifb: framebuffer at 0xc0000000, using 1920k, total 1920k
+[   13.043802] efifb: mode is 600x800x32, linelength=2432, pages=1
+[   13.043802] efifb: scrolling: redraw
+[   13.043805] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[   13.045675] Console: switching to colour frame buffer device 75x50
+[   13.047315] fb0: EFI VGA frame buffer device
+[   13.047329] intel_idle: MWAIT substates: 0x11142120
+[   13.047331] intel_idle: v0.4.1 model 0x8E
+[   13.047692] intel_idle: lapic_timer_reliable_states 0xffffffff
+[   13.048441] ACPI: AC Adapter [ADP1] (off-line)
+[   13.048565] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:19/PNP0C09:00/PNP0C0D:00/input/input0
+[   13.048652] ACPI: Lid Switch [LID0]
+[   13.048727] input: Sleep Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input1
+[   13.048748] ACPI: Sleep Button [SLPB]
+[   13.048795] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input2
+[   13.048814] ACPI: Power Button [PWRB]
+[   13.048867] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input3
+[   13.048940] ACPI: Power Button [PWRF]
+[   13.050482] [Firmware Bug]: No valid trip found
+[   13.050514] [Firmware Bug]: No valid trip found
+[   13.050760] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[   13.058939] Linux agpgart interface v0.103
+[   13.062913] loop: module loaded
+[   13.063181] libphy: Fixed MDIO Bus: probed
+[   13.063183] tun: Universal TUN/TAP device driver, 1.6
+[   13.063269] PPP generic driver version 2.4.2
+[   13.063364] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   13.063367] ehci-pci: EHCI PCI platform driver
+[   13.063382] ehci-platform: EHCI generic platform driver
+[   13.063396] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[   13.063398] ohci-pci: OHCI PCI platform driver
+[   13.063409] ohci-platform: OHCI generic platform driver
+[   13.063419] uhci_hcd: USB Universal Host Controller Interface driver
+[   13.063734] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[   13.063744] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 1
+[   13.064938] xhci_hcd 0000:00:14.0: hcc params 0x200077c1 hci version 0x100 quirks 0x00109810
+[   13.064953] xhci_hcd 0000:00:14.0: cache line size of 64 is not supported
+[   13.065267] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[   13.065271] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   13.065273] usb usb1: Product: xHCI Host Controller
+[   13.065276] usb usb1: Manufacturer: Linux 4.15.0-29-generic xhci-hcd
+[   13.065279] usb usb1: SerialNumber: 0000:00:14.0
+[   13.065507] hub 1-0:1.0: USB hub found
+[   13.065538] hub 1-0:1.0: 12 ports detected
+[   13.068325] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[   13.068332] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 2
+[   13.068398] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[   13.068401] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   13.068404] usb usb2: Product: xHCI Host Controller
+[   13.068406] usb usb2: Manufacturer: Linux 4.15.0-29-generic xhci-hcd
+[   13.068409] usb usb2: SerialNumber: 0000:00:14.0
+[   13.068886] hub 2-0:1.0: USB hub found
+[   13.068914] hub 2-0:1.0: 6 ports detected
+[   13.069620] usb: port power management may be unreliable
+[   13.073898] i8042: PNP: No PS/2 controller found.
+[   13.074234] mousedev: PS/2 mouse device common for all mice
+[   13.074828] rtc_cmos 00:01: RTC can wake from S4
+[   13.075319] rtc_cmos 00:01: rtc core: registered rtc_cmos as rtc0
+[   13.075426] rtc_cmos 00:01: alarms up to one month, y3k, 242 bytes nvram, hpet irqs
+[   13.075438] i2c /dev entries driver
+[   13.075514] device-mapper: uevent: version 1.0.3
+[   13.075654] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[   13.075659] intel_pstate: Intel P-state driver initializing
+[   13.076250] intel_pstate: HWP enabled
+[   13.076499] ledtrig-cpu: registered to indicate activity on CPUs
+[   13.076501] EFI Variables Facility v0.08 2004-May-17
+[   13.092436] ACPI: Battery Slot [BAT0] (battery present)
+[   13.099832] intel_pmc_core:  initialized
+[   13.100090] NET: Registered protocol family 10
+[   13.104397] Segment Routing with IPv6
+[   13.104415] NET: Registered protocol family 17
+[   13.104562] Key type dns_resolver registered
+[   13.105134] RAS: Correctable Errors collector initialized.
+[   13.105170] microcode: sig=0x806e9, pf=0x80, revision=0x70
+[   13.105294] microcode: Microcode Update Driver: v2.2.
+[   13.105302] sched_clock: Marking stable (13105281575, 0)->(13087451909, 17829666)
+[   13.105739] registered taskstats version 1
+[   13.105748] Loading compiled-in X.509 certificates
+[   13.107984] Loaded X.509 cert 'Build time autogenerated kernel key: 1cc37f41791529df57507d3747a6804ab53f482b'
+[   13.108606] Couldn't get size: 0x800000000000000e
+[   13.108642] MODSIGN: Couldn't get UEFI db list
+[   13.111332] Loaded UEFI:MokListRT cert 'Canonical Ltd. Master Certificate Authority: ad91990bc22ab1f517048c23b6655a268e345a63' linked to secondary sys keyring
+[   13.112194] zswap: loaded using pool lzo/zbud
+[   13.115801] Key type big_key registered
+[   13.115805] Key type trusted registered
+[   13.117464] Key type encrypted registered
+[   13.117468] AppArmor: AppArmor sha1 policy hashing enabled
+[   13.117475] ima: No TPM chip found, activating TPM-bypass! (rc=-19)
+[   13.117498] evm: HMAC attrs: 0x1
+[   13.119170]   Magic number: 3:22:282
+[   13.119217] tty tty19: hash matches
+[   13.119451] rtc_cmos 00:01: setting system clock to 2019-01-26 13:15:41 UTC (1548508541)
+[   13.119576] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[   13.119577] EDD information not available.
+[   13.121818] Freeing unused kernel memory: 2408K
+[   13.156217] Write protecting the kernel read-only data: 20480k
+[   13.156835] Freeing unused kernel memory: 2008K
+[   13.160174] Freeing unused kernel memory: 1904K
+[   13.165809] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[   13.165809] x86/mm: Checking user space page tables
+[   13.171333] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[   13.273108] sdhci: Secure Digital Host Controller Interface driver
+[   13.273109] sdhci: Copyright(c) Pierre Ossman
+[   13.275651] sdhci-pci 0000:00:1e.4: SDHCI controller found [8086:9d2b] (rev 21)
+[   13.277236] mmc0: SDHCI controller on PCI [0000:00:1e.4] using ADMA 64-bit
+[   13.312169] [drm] Memory usable by graphics device = 4096M
+[   13.312171] checking generic (c0000000 1e0000) vs hw (c0000000 10000000)
+[   13.312172] fb: switching to inteldrmfb from EFI VGA
+[   13.312211] Console: switching to colour dummy device 80x25
+[   13.312395] [drm] Replacing VGA console driver
+[   13.318315] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[   13.318316] [drm] Driver supports precise vblank timestamp query.
+[   13.320337] i915 0000:00:02.0: vgaarb: changed VGA decodes: olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[   13.320868] [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_01.bin (v1.1)
+[   13.325670] random: fast init done
+[   13.327538] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327571] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327583] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327585] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327593] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327597] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327646] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327664] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327673] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327676] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   13.327928] [drm] Initialized i915 1.6.0 20171023 for 0000:00:02.0 on minor 0
+[   13.330632] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[   13.331087] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input4
+[   13.404576] usb 2-1: new SuperSpeed USB device number 2 using xhci_hcd
+[   13.417337] mmc0: new HS400 MMC card at address 0001
+[   13.419409] mmcblk0: mmc0:0001 HDG8a4 116 GiB 
+[   13.419597] mmcblk0boot0: mmc0:0001 HDG8a4 partition 1 4.00 MiB
+[   13.419788] mmcblk0boot1: mmc0:0001 HDG8a4 partition 2 4.00 MiB
+[   13.419851] mmcblk0rpmb: mmc0:0001 HDG8a4 partition 3 4.00 MiB, chardev (243:0)
+[   13.421658]  mmcblk0: p1 p2 p3
+[   13.435467] usb 2-1: New USB device found, idVendor=0bda, idProduct=0316
+[   13.435469] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   13.435471] usb 2-1: Product: USB3.0-CRW
+[   13.435472] usb 2-1: Manufacturer: Generic
+[   13.435473] usb 2-1: SerialNumber: 20120501030900000
+[   13.442936] usb-storage 2-1:1.0: USB Mass Storage device detected
+[   13.443119] scsi host0: usb-storage 2-1:1.0
+[   13.443182] usbcore: registered new interface driver usb-storage
+[   13.444443] usbcore: registered new interface driver uas
+[   13.552107] usb 1-7: new full-speed USB device number 2 using xhci_hcd
+[   13.595185] fbcon: inteldrmfb (fb0) is primary device
+[   13.702181] usb 1-7: New USB device found, idVendor=8087, idProduct=0a2a
+[   13.702183] usb 1-7: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   13.828118] usb 2-4: new SuperSpeed USB device number 3 using xhci_hcd
+[   13.848887] usb 2-4: New USB device found, idVendor=1f75, idProduct=0903
+[   13.848889] usb 2-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   13.848890] usb 2-4: Product: PenDrive
+[   13.848891] usb 2-4: Manufacturer: Innostor
+[   13.848893] usb 2-4: SerialNumber: 000000000000000077
+[   13.849725] usb-storage 2-4:1.0: USB Mass Storage device detected
+[   13.849917] scsi host1: usb-storage 2-4:1.0
+[   13.976279] usb 1-9: new low-speed USB device number 3 using xhci_hcd
+[   14.044553] clocksource: Switched to clocksource tsc
+[   14.133733] usb 1-9: New USB device found, idVendor=258a, idProduct=000c
+[   14.133734] usb 1-9: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[   14.133736] usb 1-9: Product: USB KEYBOARD
+[   14.133737] usb 1-9: Manufacturer: HAILUCK CO.,LTD
+[   14.139199] hidraw: raw HID events driver (C) Jiri Kosina
+[   14.156737] usbcore: registered new interface driver usbhid
+[   14.156738] usbhid: USB HID core driver
+[   14.158868] input: HAILUCK CO.,LTD USB KEYBOARD as /devices/pci0000:00/0000:00:14.0/usb1/1-9/1-9:1.0/0003:258A:000C.0001/input/input5
+[   14.216494] hid-generic 0003:258A:000C.0001: input,hidraw0: USB HID v1.10 Keyboard [HAILUCK CO.,LTD USB KEYBOARD] on usb-0000:00:14.0-9/input0
+[   14.216722] input: HAILUCK CO.,LTD USB KEYBOARD as /devices/pci0000:00/0000:00:14.0/usb1/1-9/1-9:1.1/0003:258A:000C.0002/input/input6
+[   14.276678] hid-generic 0003:258A:000C.0002: input,hiddev0,hidraw1: USB HID v1.10 Mouse [HAILUCK CO.,LTD USB KEYBOARD] on usb-0000:00:14.0-9/input1
+[   14.462453] scsi 0:0:0:0: Direct-Access     Generic- SD/MMC           1.00 PQ: 0 ANSI: 6
+[   14.462775] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[   14.682302] Console: switching to colour frame buffer device 150x120
+[   14.702834] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+[   14.812435] [drm] RC6 on
+[   14.876903] scsi 1:0:0:0: Direct-Access     Innostor Innostor         1.00 PQ: 0 ANSI: 6
+[   14.877525] sd 1:0:0:0: Attached scsi generic sg1 type 0
+[   14.877712] sd 1:0:0:0: [sdb] 247463936 512-byte logical blocks: (127 GB/118 GiB)
+[   14.877875] sd 1:0:0:0: [sdb] Write Protect is off
+[   14.877877] sd 1:0:0:0: [sdb] Mode Sense: 23 00 00 00
+[   14.878056] sd 1:0:0:0: [sdb] Write cache: disabled, read cache: disabled, doesn't support DPO or FUA
+[   14.880364]  sdb: sdb1 sdb2
+[   14.881094] sd 1:0:0:0: [sdb] Attached SCSI removable disk
+[   15.421797] sd 0:0:0:0: [sda] 1000144896 512-byte logical blocks: (512 GB/477 GiB)
+[   15.422076] sd 0:0:0:0: [sda] Write Protect is off
+[   15.422077] sd 0:0:0:0: [sda] Mode Sense: 2f 00 00 00
+[   15.422348] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[   15.424318]  sda: sda1
+[   15.425296] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[   16.179783] ISO 9660 Extensions: Microsoft Joliet Level 3
+[   16.182594] ISO 9660 Extensions: RRIP_1991A
+[   17.038763] random: crng init done
+[   20.041920] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   20.085031] systemd[1]: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[   20.104282] systemd[1]: Detected architecture x86-64.
+[   20.106986] systemd[1]: Set hostname to <ubuntu>.
+[   20.107179] systemd[1]: Initializing machine ID from random generator.
+[   20.197541] systemd[1]: Created slice User and Session Slice.
+[   20.197585] systemd[1]: Reached target Swap.
+[   20.197593] systemd[1]: Reached target User and Group Name Lookups.
+[   20.197791] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[   20.197903] systemd[1]: Created slice System Slice.
+[   20.197985] systemd[1]: Listening on Journal Socket.
+[   20.267382] systemd-journald[1014]: Received request to flush runtime journal from PID 1
+[   20.308236] lp: driver loaded but no devices found
+[   20.321540] ppdev: user-space parallel port driver
+[   20.479203] input: Intel HID events as /devices/pci0000:00/0000:00:1f.0/PNP0C09:00/INT33D5:00/input/input7
+[   20.479905] intel-hid INT33D5:00: platform supports 5 button array
+[   20.479951] input: Intel HID 5 button array as /devices/pci0000:00/0000:00:1f.0/PNP0C09:00/INT33D5:00/input/input8
+[   20.539959] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[   20.544392] intel-lpss 0000:00:15.0: enabling device (0000 -> 0002)
+[   20.566408] idma64 idma64.0: Found Intel integrated DMA 64-bit
+[   20.578047] proc_thermal 0000:00:04.0: enabling device (0000 -> 0002)
+[   20.579454] (NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[   20.579555] mei_me 0000:00:16.0: enabling device (0004 -> 0006)
+[   20.599181] intel-lpss 0000:00:15.1: enabling device (0000 -> 0002)
+[   20.599549] idma64 idma64.1: Found Intel integrated DMA 64-bit
+[   20.622741] Bluetooth: Core ver 2.22
+[   20.622757] NET: Registered protocol family 31
+[   20.622759] Bluetooth: HCI device and connection manager initialized
+[   20.622762] Bluetooth: HCI socket layer initialized
+[   20.622765] Bluetooth: L2CAP socket layer initialized
+[   20.622772] Bluetooth: SCO socket layer initialized
+[   20.628995] intel-lpss 0000:00:15.2: enabling device (0000 -> 0002)
+[   20.631519] idma64 idma64.2: Found Intel integrated DMA 64-bit
+[   20.659691] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   20.660116] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   20.670517] usbcore: registered new interface driver btusb
+[   20.681315] Goodix-TS i2c-GDIX1001:00: ID 911, version: 1062
+[   20.686391] input: Goodix Capacitive TouchScreen as /devices/pci0000:00/0000:00:15.2/i2c_designware.2/i2c-7/i2c-GDIX1001:00/input/input9
+[   20.688129] Bluetooth: hci0: read Intel version: 370810011003110e32
+[   20.688131] Bluetooth: hci0: Intel device is already patched. patch num: 32
+[   20.726650] intel-lpss 0000:00:1e.0: enabling device (0000 -> 0002)
+[   20.727110] idma64 idma64.3: Found Intel integrated DMA 64-bit
+[   20.772227] RAPL PMU: API unit is 2^-32 Joules, 5 fixed counters, 655360 ms ovfl timer
+[   20.772229] RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+[   20.772230] RAPL PMU: hw unit of domain package 2^-14 Joules
+[   20.772231] RAPL PMU: hw unit of domain dram 2^-14 Joules
+[   20.772232] RAPL PMU: hw unit of domain pp1-gpu 2^-14 Joules
+[   20.772233] RAPL PMU: hw unit of domain psys 2^-14 Joules
+[   20.806286] Intel(R) Wireless WiFi driver for Linux
+[   20.806287] Copyright(c) 2003- 2015 Intel Corporation
+[   20.806552] iwlwifi 0000:01:00.0: enabling device (0000 -> 0002)
+[   21.116233] dw-apb-uart.3: ttyS4 at MMIO 0xdf132000 (irq = 20, base_baud = 115200) is a 16550A
+[   21.129064] AVX2 version of gcm_enc/dec engaged.
+[   21.129065] AES CTR mode by8 optimization enabled
+[   21.203750] iwlwifi 0000:01:00.0: loaded firmware version 29.1044073957.0 op_mode iwlmvm
+[   21.344829] snd_hda_intel 0000:00:1f.3: enabling device (0000 -> 0002)
+[   21.345082] snd_hda_intel 0000:00:1f.3: bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+[   21.445564] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   21.445566] Bluetooth: BNEP filters: protocol multicast
+[   21.445570] Bluetooth: BNEP socket layer initialized
+[   21.483924] snd_hda_codec_realtek hdaudioC0D0: autoconfig for ALC269VC: line_outs=1 (0x1a/0x0/0x0/0x0/0x0) type:speaker
+[   21.483928] snd_hda_codec_realtek hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[   21.483930] snd_hda_codec_realtek hdaudioC0D0:    hp_outs=1 (0x15/0x0/0x0/0x0/0x0)
+[   21.483932] snd_hda_codec_realtek hdaudioC0D0:    mono: mono_out=0x0
+[   21.483934] snd_hda_codec_realtek hdaudioC0D0:    inputs:
+[   21.483936] snd_hda_codec_realtek hdaudioC0D0:      Mic=0x18
+[   21.483938] snd_hda_codec_realtek hdaudioC0D0:      Internal Mic=0x12
+[   21.527653] input: HDA Intel PCH Mic as /devices/pci0000:00/0000:00:1f.3/sound/card0/input10
+[   21.527767] input: HDA Intel PCH Headphone as /devices/pci0000:00/0000:00:1f.3/sound/card0/input11
+[   21.527843] input: HDA Intel PCH HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input12
+[   21.527916] input: HDA Intel PCH HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input13
+[   21.527989] input: HDA Intel PCH HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input14
+[   21.528392] input: HDA Intel PCH HDMI/DP,pcm=9 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input15
+[   21.528498] input: HDA Intel PCH HDMI/DP,pcm=10 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input16
+[   21.550055] iwlwifi 0000:01:00.0: Detected Intel(R) Dual Band Wireless AC 3165, REV=0x210
+[   21.581517] iwlwifi 0000:01:00.0: base HW address: 38:de:ad:26:ab:c9
+[   21.677392] ieee80211 phy0: Selected rate control algorithm 'iwl-mvm-rs'
+[   21.677730] (NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[   21.677753] thermal thermal_zone4: failed to read out thermal zone (-61)
+[   21.697199] intel_rapl: Found RAPL domain package
+[   21.697201] intel_rapl: Found RAPL domain core
+[   21.697203] intel_rapl: Found RAPL domain uncore
+[   21.697204] intel_rapl: Found RAPL domain dram
+[   21.700162] iwlwifi 0000:01:00.0 wlp1s0: renamed from wlan0
+[   21.994175] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   22.112882] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   22.188838] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   22.501749] audit: type=1400 audit(1548508550.877:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=1411 comm="apparmor_parser"
+[   22.502010] audit: type=1400 audit(1548508550.877:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=1411 comm="apparmor_parser"
+[   25.437054] Bluetooth: RFCOMM TTY layer initialized
+[   25.437061] Bluetooth: RFCOMM socket layer initialized
+[   25.437066] Bluetooth: RFCOMM ver 1.11
+[   27.604297] rfkill: input handler disabled
+[   31.834400] audit: type=1400 audit(1548508560.209:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.core" pid=2275 comm="apparmor_parser"
+[   31.931168] audit: type=1400 audit(1548508560.305:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.core.hook.configure" pid=2277 comm="apparmor_parser"
+[   33.207870] audit: type=1400 audit(1548508561.581:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine" pid=2349 comm="apparmor_parser"
+[   33.208099] audit: type=1400 audit(1548508561.585:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=2349 comm="apparmor_parser"
+[   33.213166] audit: type=1400 audit(1548508561.589:8): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=2408 comm="apparmor_parser"
+[   33.330740] audit: type=1400 audit(1548508561.705:9): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.core.hook.configure" pid=2410 comm="apparmor_parser"
+[   33.364423] audit: type=1400 audit(1548508561.741:10): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine" pid=2418 comm="apparmor_parser"
+[   33.388212] audit: type=1400 audit(1548508561.765:11): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=2418 comm="apparmor_parser"
+[   33.397088] audit: type=1400 audit(1548508561.773:12): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=2420 comm="apparmor_parser"
+[   33.407562] audit: type=1400 audit(1548508561.781:13): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=2422 comm="apparmor_parser"
+[   36.861862] kauditd_printk_skb: 12 callbacks suppressed
+[   36.861863] audit: type=1400 audit(1548508565.237:26): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.gnome-calculator" pid=2741 comm="apparmor_parser"
+[   37.091098] audit: type=1400 audit(1548508565.465:27): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-calculator.gnome-calculator" pid=2743 comm="apparmor_parser"
+[   37.254496] audit: type=1400 audit(1548508565.629:28): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-calculator" pid=2751 comm="apparmor_parser"
+[   37.482708] audit: type=1400 audit(1548508565.857:29): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-calculator.gnome-calculator" pid=2753 comm="apparmor_parser"
+[   37.648877] audit: type=1400 audit(1548508566.025:30): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-calculator" pid=2761 comm="apparmor_parser"
+[   37.866393] audit: type=1400 audit(1548508566.241:31): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-calculator.gnome-calculator" pid=2763 comm="apparmor_parser"
+[   38.124720] audit: type=1400 audit(1548508566.501:32): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-calculator" pid=2771 comm="apparmor_parser"
+[   38.337401] audit: type=1400 audit(1548508566.713:33): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-calculator.gnome-calculator" pid=2773 comm="apparmor_parser"
+[   38.385059] audit: type=1400 audit(1548508566.761:34): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine" pid=2781 comm="apparmor_parser"
+[   38.385063] audit: type=1400 audit(1548508566.761:35): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=2781 comm="apparmor_parser"
+[   42.061572] kauditd_printk_skb: 24 callbacks suppressed
+[   42.061574] audit: type=1400 audit(1548508570.437:60): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.gnome-characters" pid=2966 comm="apparmor_parser"
+[   42.161092] audit: type=1400 audit(1548508570.537:61): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=2968 comm="apparmor_parser"
+[   42.462115] audit: type=1400 audit(1548508570.837:62): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=2977 comm="apparmor_parser"
+[   42.566771] audit: type=1400 audit(1548508570.941:63): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=2979 comm="apparmor_parser"
+[   42.755990] audit: type=1400 audit(1548508571.129:64): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=2987 comm="apparmor_parser"
+[   42.850561] audit: type=1400 audit(1548508571.225:65): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=2989 comm="apparmor_parser"
+[   42.908357] audit: type=1400 audit(1548508571.285:66): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine" pid=2997 comm="apparmor_parser"
+[   42.908362] audit: type=1400 audit(1548508571.285:67): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=2997 comm="apparmor_parser"
+[   42.913600] audit: type=1400 audit(1548508571.289:68): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=2999 comm="apparmor_parser"
+[   42.918542] audit: type=1400 audit(1548508571.293:69): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=3001 comm="apparmor_parser"
+[   47.163206] kauditd_printk_skb: 51 callbacks suppressed
+[   47.163208] audit: type=1400 audit(1548508575.537:121): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-logs.gnome-logs" pid=3276 comm="apparmor_parser"
+[   47.240382] audit: type=1400 audit(1548508575.617:122): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine" pid=3284 comm="apparmor_parser"
+[   47.240386] audit: type=1400 audit(1548508575.617:123): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=3284 comm="apparmor_parser"
+[   47.244761] audit: type=1400 audit(1548508575.621:124): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=3286 comm="apparmor_parser"
+[   47.248704] audit: type=1400 audit(1548508575.625:125): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=3288 comm="apparmor_parser"
+[   47.281738] audit: type=1400 audit(1548508575.657:126): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.gnome-logs" pid=3296 comm="apparmor_parser"
+[   47.405540] audit: type=1400 audit(1548508575.781:127): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-logs.gnome-logs" pid=3298 comm="apparmor_parser"
+[   47.593020] audit: type=1400 audit(1548508575.969:128): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-logs" pid=3306 comm="apparmor_parser"
+[   47.743778] audit: type=1400 audit(1548508576.117:129): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-logs.gnome-logs" pid=3308 comm="apparmor_parser"
+[   47.815224] audit: type=1400 audit(1548508576.189:130): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine" pid=3316 comm="apparmor_parser"
+[   52.314845] kauditd_printk_skb: 41 callbacks suppressed
+[   52.314847] audit: type=1400 audit(1548508580.689:172): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine" pid=3546 comm="apparmor_parser"
+[   52.314852] audit: type=1400 audit(1548508580.689:173): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=3546 comm="apparmor_parser"
+[   52.319417] audit: type=1400 audit(1548508580.693:174): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=3548 comm="apparmor_parser"
+[   52.323725] audit: type=1400 audit(1548508580.697:175): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=3550 comm="apparmor_parser"
+[   52.426760] audit: type=1400 audit(1548508580.801:176): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.gnome-system-monitor" pid=3558 comm="apparmor_parser"
+[   52.549455] audit: type=1400 audit(1548508580.925:177): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-system-monitor.gnome-system-monitor" pid=3560 comm="apparmor_parser"
+[   52.832743] audit: type=1400 audit(1548508581.209:178): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-system-monitor" pid=3567 comm="apparmor_parser"
+[   52.928272] audit: type=1400 audit(1548508581.305:179): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-system-monitor.gnome-system-monitor" pid=3569 comm="apparmor_parser"
+[   53.124623] audit: type=1400 audit(1548508581.501:180): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-system-monitor" pid=3577 comm="apparmor_parser"
+[   53.217996] audit: type=1400 audit(1548508581.593:181): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-system-monitor.gnome-system-monitor" pid=3579 comm="apparmor_parser"
+[   55.764100] [drm] Reducing the compressed framebuffer size. This may lead to less power savings than a non-reduced-size. Try to increase stolen memory size if available in BIOS.
+[   57.565267] kauditd_printk_skb: 48 callbacks suppressed
+[   57.565269] audit: type=1400 audit(1548508585.941:230): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.gnome-system-monitor" pid=3763 comm="apparmor_parser"
+[   57.853647] audit: type=1400 audit(1548508586.229:231): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-system-monitor.gnome-system-monitor" pid=3765 comm="apparmor_parser"
+[   57.930539] audit: type=1400 audit(1548508586.305:232): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine" pid=3773 comm="apparmor_parser"
+[   57.930544] audit: type=1400 audit(1548508586.305:233): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/4917/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=3773 comm="apparmor_parser"
+[   57.935414] audit: type=1400 audit(1548508586.309:234): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=3775 comm="apparmor_parser"
+[   57.940392] audit: type=1400 audit(1548508586.317:235): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=3777 comm="apparmor_parser"
+[   58.181063] audit: type=1400 audit(1548508586.557:236): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.gnome-system-monitor" pid=3785 comm="apparmor_parser"
+[   58.495935] audit: type=1400 audit(1548508586.869:237): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-system-monitor.gnome-system-monitor" pid=3787 comm="apparmor_parser"
+[   58.790727] audit: type=1400 audit(1548508587.165:238): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-system-monitor" pid=3795 comm="apparmor_parser"
+[   59.105068] audit: type=1400 audit(1548508587.481:239): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-system-monitor.gnome-system-monitor" pid=3797 comm="apparmor_parser"
+[   77.344913] wlp1s0: authenticate with 70:3a:cb:3a:ce:54
+[   77.352076] wlp1s0: send auth to 70:3a:cb:3a:ce:54 (try 1/3)
+[   77.355370] wlp1s0: authenticated
+[   77.360022] wlp1s0: associate with 70:3a:cb:3a:ce:54 (try 1/3)
+[   77.363376] wlp1s0: RX AssocResp from 70:3a:cb:3a:ce:54 (capab=0x1011 status=0 aid=1)
+[   77.365068] wlp1s0: associated
+[   77.392076] IPv6: ADDRCONF(NETDEV_CHANGE): wlp1s0: link becomes ready
+[   77.416710] wlp1s0: Limiting TX power to 20 (20 - 0) dBm as advertised by 70:3a:cb:3a:ce:54
+[  904.893229] pcieport 0000:00:1d.0: AER: Corrected error received: id=00e8
+[  904.893244] pcieport 0000:00:1d.0: PCIe Bus Error: severity=Corrected, type=Physical Layer, id=00e8(Receiver ID)
+[  904.893249] pcieport 0000:00:1d.0:   device [8086:9d18] error status/mask=00000001/00002000
+[  904.893251] pcieport 0000:00:1d.0:    [ 0] Receiver Error         (First)
