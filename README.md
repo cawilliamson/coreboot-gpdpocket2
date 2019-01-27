@@ -8,8 +8,7 @@ So far I have discovered that the GPD Pocket 2 has a few interesting (and someti
 
 - My plan for resolving the above issue is to replace the GigaDevices GD25Q64C BIOS / UEFI chip with a GigaDevices GD25Q64CSIG which is the exact same chip but with a SOP8 connector which *can* be written to and read with a test clip. That means I can flash the BIOS in-place without removing it from the computer.
 
-- So far I have ordered the following in order to progress with the hardware testing side of this project:
-
+# Items Needed
 ZkeeShop CH341A 24/25 Series SPI Router LCD Flash BIOS USB Programmer (supports 3.3V BIOS chips)
 WINGONEER SOIC8 SOP8 Test Clip For EEPROM 93CXX / 25CXX / 24CXX in-circuit programming+2 adapters (any SOIC8 clip is fine)
 GD25Q64CSIG Memory NOR Flash Quad I/O SPI 120MHz 2.7-3.6V SOP8 GIGADEVICE (exact replacement for existing chip with SOC8 connectors)
